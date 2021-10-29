@@ -9,6 +9,8 @@ const router = express.Router();
 // app.patch('/api/v1/tours/:id', patchTour)
 // app.delete('/api/v1/tours/:id', deleteTour)
 
+router.route('/top-5-cheap').get(tourController.aliasTopTours, tourController.getAllTours)
+
 router
   .route('/')
   .get(tourController.getAllTours)
